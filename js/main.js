@@ -3,7 +3,7 @@
 const buttons = document.getElementById("buttons")
 const bill = document.getElementById('bill')
 const persons = document.getElementById('persons')
-const customTip = document.getElementById('custom-tip')
+const custom_tip = document.getElementById('custom-tip')
 const reset_btn = document.getElementById("reset")
 const inputs = document.querySelectorAll(".field")
 
@@ -15,12 +15,12 @@ inputs.forEach(element=>{
 buttons.addEventListener('click', (e)=> {
     toggleActiveButton(e)
 })
-customTip.addEventListener('change', (e) => {
+custom_tip.addEventListener('change', (e) => {
     toggleActiveButton(e)
 })
 
 
-let activeTip = 15;
+let active_tip = 15;
 
 function handleError (action){
     const error = document.getElementById('error')
@@ -45,18 +45,18 @@ function toggleActiveButton( e ){
     if(e.target.tagName === 'BUTTON'){
         btns.forEach(el=>el.classList.remove('btn-active'));
         e.target.classList.add('btn-active');
-        activeTip = parseInt(e.target.innerText);
+        active_tip = parseInt(e.target.innerText);
     }else if(e.target.tagName === "INPUT"){
         btns.forEach(el=>el.classList.remove('btn-active'));
         e.target.classList.add('btn-active');
-        activeTip = parseFloat(e.target.value) || 0;
+        active_tip = parseFloat(e.target.value) || 0;
     }
     calculateAmount()
 }
 
 function calculateAmount( ) {
     const tip = document.getElementById('tip')
-    const totalNum = document.getElementById('total')
+    const total_num = document.getElementById('total')
     if(persons.value === '0' || !persons.value){
         return handleError('add')
     }else{
@@ -65,16 +65,16 @@ function calculateAmount( ) {
     reset_btn.classList.remove('disabled')
 
     const price = parseFloat(bill.value) / parseInt(persons.value)
-    const tipAmount = price * activeTip / 100
-    const total = price + tipAmount
+    const tip_amount = price * active_tip / 100
+    const total = price + tip_amount
 
-    tip.innerText = tipAmount.toFixed(2)
-    totalNum.innerText = total.toFixed(2)
+    tip.innerText = tip_amount.toFixed(2)
+    total_num.innerText = total.toFixed(2)
 }
 
 function handleReset () {
     reset_btn.classList.add('disabled')
-    customTip.value = ""
+    custom_tip.value = ""
     persons.value = 0
     bill.value = 0
     toggleActiveButton(document.querySelectorAll('.btn')[0])
