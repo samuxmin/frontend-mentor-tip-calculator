@@ -5,14 +5,20 @@ const bill = document.getElementById('bill')
 const persons = document.getElementById('persons')
 const customTip = document.getElementById('custom-tip')
 const reset_btn = document.getElementById("reset")
+const inputs = document.querySelectorAll(".field")
 
-
+inputs.forEach(element=>{
+    element.addEventListener("change",()=>{
+        calculateAmount()
+    })
+})
 buttons.addEventListener('click', (e)=> {
     toggleActiveButton(e)
 })
 customTip.addEventListener('change', (e) => {
     toggleActiveButton(e)
 })
+
 
 let activeTip = 15;
 

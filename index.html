@@ -22,7 +22,7 @@
         <span class="icon">
           <img src="images/icon-dollar.svg"/>
         </span>
-        <input type="number" class="field" name="bill" id="bill" value="0" onchange="()=>{calculateAmount()}">
+        <input type="number" class="field" name="bill" id="bill" value="0"">
       </div>
       <h5 class="text-1">Select tip %</h5>
       <div class="btn-group" id="buttons">
@@ -31,7 +31,7 @@
         <button class="btn btn-active">15%</button>
         <button class="btn">25%</button>
         <button class="btn">50%</button>
-        <input class="btn" id="custom-tip" type="number" value="" placeholder="Custom" onblur="(e)=>{toggleActiveButton(e)}" onchange="(e) => {toggleActiveButton(e)}">
+        <input class="btn" id="custom-tip" type="number" value="" placeholder="Custom" onblur="(e)=>{toggleActiveButton(e)}" />
       </div>
       <div class="text-parent">
         <h5 class="text-1">Number of People</h5>
@@ -41,7 +41,7 @@
         <span class="icon">
           <img src="images/icon-person.svg"/>
         </span>
-        <input type="number" name="persons" class="field"id="persons" value="0" onblur="()=>{calculateAmount()}" onchange="()=>{calculateAmount()}">
+        <input type="number" name="persons" class="field" id="persons" value="0"">
       </div>
     </div>
     <div class="card-rigth">
