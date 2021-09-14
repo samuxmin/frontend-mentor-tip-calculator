@@ -77,5 +77,6 @@ function handleReset () {
     custom_tip.value = ""
     persons.value = 0
     bill.value = 0
+    handleError('remove')
     toggleActiveButton(document.querySelectorAll('.btn')[0])
 }
