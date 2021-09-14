@@ -1,3 +1,5 @@
+"use strict"
+
 const buttons = document.getElementById("buttons")
 const bill = document.getElementById('bill')
 const persons = document.getElementById('persons')
