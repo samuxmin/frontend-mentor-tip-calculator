@@ -22,12 +22,13 @@ body, html{
     flex-direction: column;
     justify-content: space-evenly;
     width: 100vw;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
 }
 .title{
     text-align: center;
-    margin: 30px 10px 60px 10px;
+    margin: 70px 10px 60px 10px;
     letter-spacing:5px;
     color: $darker-grayish-cyan;
 }
@@ -36,12 +37,15 @@ body, html{
     border-radius: 20px;
     display: grid;
     align-items: center;
-    max-width: 800px;
+    max-width: 960px;
     justify-content: center;
     margin: auto;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 20px;
+}
+.card-left{
+    padding: 30px;
 }
 .btn-group{
     display: grid;
@@ -56,7 +60,7 @@ body, html{
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     padding: 5px 10px;
     outline: none;
@@ -121,6 +125,7 @@ input.field{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
+    padding: 30px;
     background-color: $very-dark-cyan;
     color: white;
     align-items: center;
@@ -190,6 +195,7 @@ input.field{
     color: $dark-grayish-cyan;
 }
 .amount{
+    float: right;
     text-align: right;
     font-weight: 700;
     font-size: 40px;
