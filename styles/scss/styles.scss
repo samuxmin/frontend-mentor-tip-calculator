@@ -22,7 +22,7 @@ body, html{
     flex-direction: column;
     justify-content: space-evenly;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0px;
     padding: 0px;
 }
@@ -37,7 +37,7 @@ body, html{
     border-radius: 20px;
     display: grid;
     align-items: center;
-    max-width: 960px;
+    max-width: 900px;
     justify-content: center;
     margin: auto;
     grid-template-columns: 1fr 1fr;
@@ -46,6 +46,16 @@ body, html{
 }
 .card-left{
     padding: 30px;
+}
+.text-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.text-1{
+    color: $dark-grayish-cyan;
+    display: inline-block;
 }
 .btn-group{
     display: grid;
@@ -68,12 +78,15 @@ body, html{
         background-color: $light-grayish-cyan;
     }
 }
+.btn-active{
+    color:$very-dark-cyan ;
+    background-color: $primary;
+}
 input.btn{
     color: $primary;
     background-color: white;
     &:active, &:focus{
         color: $primary;
-        box-sizing: border-box;
         background-color: white;
         border: 2px solid $light-grayish-cyan;    
     }
@@ -103,7 +116,6 @@ input.btn{
     height: 100%;
 };
 input{
-    background-color: $lighter-grayish-cyan;
     font-size: 24px;
     text-align: right;
     border: none;
@@ -111,6 +123,7 @@ input{
     width: 100%;
 }
 input.field{
+    background-color: $lighter-grayish-cyan;
     margin: 0px;
     color: $very-dark-cyan;
     font-weight: 700;
@@ -120,10 +133,17 @@ input.field{
     border: 1px solid red;
     border-radius: 5px;
 }
+.card-rigth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
     justify-content: center;
     padding: 30px;
     background-color: $very-dark-cyan;
@@ -133,11 +153,21 @@ input.field{
     height: 100%;
     border-radius: 15px;
 }
-.card-rigth{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.text-2{
+    margin: 0 auto auto 20px;
+}
+.small-text{
+    margin: 0 auto auto 20px;
+    color: $dark-grayish-cyan;
+}
+.amount{
+    float: right;
+    text-align: right;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+    margin-right: 20px;
+    color: $primary;
 }
 .reset-btn{
     color: $very-dark-cyan;
@@ -162,46 +192,13 @@ input.field{
         background-color: $darker-grayish-cyan;
     }
 }
-.text-parent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
 .price, .total{
     color: $primary;
-}
-
-.btn-active{
-    color:$very-dark-cyan ;
-    background-color: $primary;
-}
-.text-1{
-    color: $dark-grayish-cyan;
-    display: inline-block;
 }
 .error{
     color: red;
     float: right;
     font-size: 12px;
-}
-
-.text-2{
-    margin: 0 auto auto 20px;
-}
-.small-text{
-    margin: 0 auto auto 20px;
-    color: $dark-grayish-cyan;
-}
-.amount{
-    float: right;
-    text-align: right;
-    font-weight: 700;
-    font-size: 40px;
-    margin: 0;
-    margin-right: 20px;
-    color: $primary;
 }
 
 @media(max-width:640px){
